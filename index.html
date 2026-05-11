@@ -24,6 +24,17 @@
       font-weight: 700;
       line-height: 1.3;
     }
+
+    .row-id {
+      width: 180px;         /* Forces the column to be wide enough for titles */
+      min-width: 180px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      text-align: left !important;
+      padding: 15px !important;
+      word-break: normal;    /* REMOVED break-all to stop the vertical text */
+    }
     header .authors {
       margin-top: 0.75rem;
       font-size: 1rem;
@@ -33,8 +44,22 @@
       text-decoration: underline;
     }
     table audio {
-      width: 200px;
+    /* Increase this value! */
+      width: 240px; 
+      height: 40px; /* Standard height for the browser player */
+      display: block;
+      margin: 5px auto;
     }
+    /* Ensure the table columns can expand to fit the wider players */
+    .table {
+      table-layout: auto;
+      min-width: 1100px;     /* Prevents the table from collapsing too much */
+  }
+
+    .table td {
+      vertical-align: middle !important;
+    }
+
     .row-id {
       font-weight: 600;
       font-size: 0.8rem;
@@ -51,7 +76,7 @@
     <div class="container text-center">
       <h1>MuScriptor: An Open Model for Multi-Instrument Music Transcription</h1>
       <!-- <p class="authors">[Author names here] &mdash; [Institution] &mdash; [Year]</p> -->
-      <p class="authors">Under Review, we recommand using Chrome</p>
+      <p class="authors">Under Review, we recommend using Chrome</p>
     </div>
   </header>
 
@@ -95,107 +120,107 @@ In this work, we analyze the effectiveness of synthetic data for pre-training wh
 
             <tr>
               <td class="row-id">Oasis - Don't Look Back In Anger</td>
-              <td><audio controls src="src/original/15472.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/15472.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/15472.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/15472.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/15472.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/15472.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/15472.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/15472.mp3"></audio></td>
             </tr>
 
 
             <!-- <tr>
               <td class="row-id">10139</td>
-              <td><audio controls src="src/original/10139.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/10139.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/10139.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/10139.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/10139.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/10139.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/10139.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/10139.mp3"></audio></td>
             </tr> -->
 
 
             <tr>
               <td class="row-id">Metallica - Fade to Black</td>
-              <td><audio controls src="src/original/20.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/20.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/20.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/20.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/20.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/20.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/20.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/20.mp3"></audio></td>
             </tr>
 
             <tr>
               <td class="row-id">Radiohead - Karma Police</td>
-              <td><audio controls src="src/original/217.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/217.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/217.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/217.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/217.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/217.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/217.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/217.mp3"></audio></td>
             </tr>
             <tr>
               <td class="row-id">Ariettes oubliees</td>
-              <td><audio controls src="src/original/0CEBC4A2C1B4d1cd.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/0CEBC4A2C1B4d1cd.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/0CEBC4A2C1B4d1cd.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/0CEBC4A2C1B4d1cd.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/0CEBC4A2C1B4d1cd.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/0CEBC4A2C1B4d1cd.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/0CEBC4A2C1B4d1cd.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/0CEBC4A2C1B4d1cd.mp3"></audio></td>
             </tr>
 
             <tr>
               <td class="row-id">Red Hot Chili Peppers - Snow</td>
-              <td><audio controls src="src/original/249.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/249.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/249.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/249.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/249.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/249.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/249.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/249.mp3"></audio></td>
             </tr>
 
             <tr>
               <td class="row-id">Nirvana - About a Girl</td>
-              <td><audio controls src="src/original/29.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/29.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/29.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/29.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/29.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/29.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/29.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/29.mp3"></audio></td>
             </tr>
 
             <!-- <tr>
               <td class="row-id">2DFe6bC4b9caBA6f</td>
-              <td><audio controls src="src/original/2DFe6bC4b9caBA6f.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/2DFe6bC4b9caBA6f.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/2DFe6bC4b9caBA6f.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/2DFe6bC4b9caBA6f.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/2DFe6bC4b9caBA6f.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/2DFe6bC4b9caBA6f.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/2DFe6bC4b9caBA6f.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/2DFe6bC4b9caBA6f.mp3"></audio></td>
             </tr> -->
             <tr>
               <td class="row-id">The Stars and Stripes Forever - US Military Academy Band</td>
-              <td><audio controls src="src/original/79FeacDFAD6B681e.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/79FeacDFAD6B681e.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/79FeacDFAD6B681e.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/79FeacDFAD6B681e.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/79FeacDFAD6B681e.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/79FeacDFAD6B681e.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/79FeacDFAD6B681e.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/79FeacDFAD6B681e.mp3"></audio></td>
             </tr>
 
             <tr>
               <td class="row-id">Red Hot Chili Peppers - Scar Tissue</td>
-              <td><audio controls src="src/original/49.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/49.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/49.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/49.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/49.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/49.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/49.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/49.mp3"></audio></td>
             </tr>
 
             <!-- <tr>
               <td class="row-id">77eB0320Eeba6DBe</td>
-              <td><audio controls src="src/original/77eB0320Eeba6DBe.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/77eB0320Eeba6DBe.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/77eB0320Eeba6DBe.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/77eB0320Eeba6DBe.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/77eB0320Eeba6DBe.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/77eB0320Eeba6DBe.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/77eB0320Eeba6DBe.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/77eB0320Eeba6DBe.mp3"></audio></td>
             </tr> -->
 
 
             <tr>
               <td class="row-id">Aa6D69560e032A94</td>
-              <td><audio controls src="src/original/Aa6D69560e032A94.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/Aa6D69560e032A94.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/Aa6D69560e032A94.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/Aa6D69560e032A94.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/Aa6D69560e032A94.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/Aa6D69560e032A94.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/Aa6D69560e032A94.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/Aa6D69560e032A94.mp3"></audio></td>
             </tr>
 
             <tr>
               <td class="row-id">Messe solennelle de Sainte Secile: Gloria</td>
-              <td><audio controls src="src/original/FbE483B38ec6dBb5.mp3"></audio></td>
-              <td><audio controls src="src/ymt3/FbE483B38ec6dBb5.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl/FbE483B38ec6dBb5.mp3"></audio></td>
-              <td><audio controls src="src/muscriptor_midi_real_rl_left_right/FbE483B38ec6dBb5.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/original/FbE483B38ec6dBb5.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/ymt3/FbE483B38ec6dBb5.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl/FbE483B38ec6dBb5.mp3"></audio></td>
+              <td><audio controls preload="metadata" src="src/muscriptor_midi_real_rl_left_right/FbE483B38ec6dBb5.mp3"></audio></td>
             </tr>
 
           </tbody>
@@ -229,5 +254,31 @@ In this work, we analyze the effectiveness of synthetic data for pre-training wh
       }
     });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const rows = document.querySelectorAll('tbody tr');
 
+    rows.forEach(row => {
+      const audios = row.querySelectorAll('audio');
+
+      audios.forEach(audio => {
+        // Stop other tracks when one starts playing (You already have this)
+        audio.addEventListener('play', function () {
+          document.querySelectorAll('audio').forEach(other => {
+            if (other !== this) other.pause();
+          });
+        });
+
+        // NEW: Synchronize the slider (seeking) across the row
+        audio.addEventListener('seeking', function () {
+          audios.forEach(other => {
+            if (other !== this) {
+              other.currentTime = this.currentTime;
+            }
+          });
+        });
+      });
+    });
+  });
+</script>
 </body></html>
