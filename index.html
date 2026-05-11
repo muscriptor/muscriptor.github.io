@@ -60,12 +60,6 @@
       vertical-align: middle !important;
     }
 
-    .row-id {
-      font-weight: 600;
-      font-size: 0.8rem;
-      color: #555;
-      word-break: break-all;
-    }
   </style>
 
 </head>
@@ -256,24 +250,29 @@ In this work, we analyze the effectiveness of synthetic data for pre-training wh
   </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const allAudios = document.querySelectorAll('audio');
     const rows = document.querySelectorAll('tbody tr');
 
     rows.forEach(row => {
-      const audios = row.querySelectorAll('audio');
+      const rowAudios = row.querySelectorAll('audio');
 
-      audios.forEach(audio => {
-        // Stop other tracks when one starts playing (You already have this)
+      rowAudios.forEach(audio => {
+        // 1. Global Pause: Stop all other tracks on the page when one plays
         audio.addEventListener('play', function () {
-          document.querySelectorAll('audio').forEach(other => {
+          allAudios.forEach(other => {
             if (other !== this) other.pause();
           });
         });
 
-        // NEW: Synchronize the slider (seeking) across the row
+        // 2. Row Sync: Sync seeking only within the current row safely
         audio.addEventListener('seeking', function () {
-          audios.forEach(other => {
+          rowAudios.forEach(other => {
             if (other !== this) {
-              other.currentTime = this.currentTime;
+              // THE FIX: Only update if the times are out of sync by more than 0.1 seconds.
+              // This prevents Audio A and Audio B from infinitely triggering each other.
+              if (Math.abs(other.currentTime - this.currentTime) > 0.1) {
+                other.currentTime = this.currentTime;
+              }
             }
           });
         });
